@@ -170,7 +170,7 @@ class _RecordScreenState extends State<RecordScreen> {
                             onPressed: () {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
-                                    builder: (context) => VideoScreen()),
+                                    builder: (context) => FirestoreVideoList()),
                               );
                             },
                             child: const Text("My videos")),
