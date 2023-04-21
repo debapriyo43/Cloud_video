@@ -54,22 +54,19 @@ class _FirestoreVideoListState extends State<FirestoreVideoList> {
               if (snapshot.connectionState == ConnectionState.done) {
                 print(videoUrls[index]);
                 return AspectRatio(
-                    aspectRatio: 16 / 9,
-                    child: Column(
-                      children: [
-                        Chewie(
-                          controller: ChewieController(
-                            videoPlayerController:
-                                VideoPlayerController.network(videoUrls[index]),
-                            aspectRatio: 3 / 2,
-                            looping: true,
-                          ),
-                        ),
-                        const SizedBox(
-                          height: 25,
-                        )
-                      ],
-                    ));
+                  aspectRatio: 16 / 9,
+                  child: Padding(
+                    padding: const EdgeInsets.all(8.0),
+                    child: Chewie(
+                      controller: ChewieController(
+                        videoPlayerController:
+                            VideoPlayerController.network(videoUrls[index]),
+                        aspectRatio: 3 / 2,
+                        looping: true,
+                      ),
+                    ),
+                  ),
+                );
               } else if (snapshot.connectionState == ConnectionState.waiting) {
                 return Container(
                   height: 200,

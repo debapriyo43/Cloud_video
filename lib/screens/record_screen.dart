@@ -71,6 +71,20 @@ class _RecordScreenState extends State<RecordScreen> {
     }
   }
 
+  void showSuccessSnackbar(BuildContext context) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text(
+          "Success",
+          style: TextStyle(
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+        backgroundColor: Colors.green,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -160,9 +174,11 @@ class _RecordScreenState extends State<RecordScreen> {
                           child: ElevatedButton(
                               onPressed: () {
                                 uploadVideo(
-                                    titleController.text,
-                                    descriptionController.text,
-                                    categoryController.text);
+                                  titleController.text,
+                                  descriptionController.text,
+                                  categoryController.text,
+                                );
+                                showSuccessSnackbar(context);
                               },
                               child: const Text("Post"))),
                       Expanded(
