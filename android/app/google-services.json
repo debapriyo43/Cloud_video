@@ -1,33 +1,33 @@
 {
   "project_info": {
-    "project_number": "886261856934",
-    "project_id": "cloud-video-f085f",
-    "storage_bucket": "cloud-video-f085f.appspot.com"
+    "project_number": "765007171599",
+    "project_id": "cloudy-video-91a19",
+    "storage_bucket": "cloudy-video-91a19.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:886261856934:android:a10281fc19dc831cc75267",
+        "mobilesdk_app_id": "1:765007171599:android:26f7a1843bd13af47bd37a",
         "android_client_info": {
           "package_name": "com.example.cloud_video"
         }
       },
       "oauth_client": [
         {
-          "client_id": "886261856934-ktlg7vastoljngcsq245sf254unu3f9k.apps.googleusercontent.com",
+          "client_id": "765007171599-ocu8u9sl00uj0s8tn3099d9kb2kv5r5p.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyDABt3-opHNKUgdM654IRRP7LQ4_RFZG7Q"
+          "current_key": "AIzaSyBuB4fFdVNgIUgIzT5us_bnYLpihPmhRqQ"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "886261856934-ktlg7vastoljngcsq245sf254unu3f9k.apps.googleusercontent.com",
+              "client_id": "765007171599-ocu8u9sl00uj0s8tn3099d9kb2kv5r5p.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

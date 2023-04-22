@@ -18,30 +18,6 @@ class _OtpState extends State<Otp> {
 
   @override
   Widget build(BuildContext context) {
-    final defaultPinTheme = PinTheme(
-      // used pin put for the otp authentication.
-      width: 56,
-      height: 56,
-      textStyle: const TextStyle(
-          fontSize: 20,
-          color: Color.fromRGBO(30, 60, 87, 1),
-          fontWeight: FontWeight.w600),
-      decoration: BoxDecoration(
-        border: Border.all(color: Color.fromRGBO(234, 239, 243, 1)),
-        borderRadius: BorderRadius.circular(20),
-      ),
-    );
-
-    final focusedPinTheme = defaultPinTheme.copyDecorationWith(
-      border: Border.all(color: Color.fromRGBO(114, 178, 238, 1)),
-      borderRadius: BorderRadius.circular(8),
-    );
-
-    final submittedPinTheme = defaultPinTheme.copyWith(
-      decoration: defaultPinTheme.decoration!.copyWith(
-        color: Color.fromRGBO(234, 239, 243, 1),
-      ),
-    );
     var code = "";
     return Scaffold(
       extendBodyBehindAppBar: true,
@@ -118,8 +94,10 @@ class _OtpState extends State<Otp> {
                           PhoneAuthProvider.credential(
                               verificationId: Phone.verify, smsCode: code);
                       await auth.signInWithCredential(credential);
-                      Navigator.of(context).pushReplacement(MaterialPageRoute(
-                          builder: (context) => const RecordScreen()));
+                      if (context.mounted) {
+                        Navigator.of(context).pushReplacement(MaterialPageRoute(
+                            builder: (context) => const RecordScreen()));
+                      }
                     } catch (e) {
                       debugPrint("wrong Otp");
                     }

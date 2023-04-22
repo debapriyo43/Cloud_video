@@ -1,6 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:pinput/pinput.dart';
 
 import './otp.dart';
 
@@ -16,14 +15,12 @@ class _PhoneState extends State<Phone> {
   TextEditingController phoneNumber = TextEditingController();
   @override
   void initState() {
-    // TODO: implement initState
     countryCode.text = "+91";
     super.initState();
   }
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     countryCode.dispose();
     phoneNumber.dispose();
@@ -119,7 +116,7 @@ class _PhoneState extends State<Phone> {
                         Phone.verify = verificationId;
                         Navigator.of(context).push(
                           MaterialPageRoute(
-                            builder: (context) => Otp(),
+                            builder: (context) => const Otp(),
                           ),
                         );
                       },
